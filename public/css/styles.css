@@ -1,0 +1,120 @@
+h1 {
+  color: purple;
+  border-bottom: 1px solid #333744;
+}
+
+/* general layout */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1;
+  display: flex;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #333744;
+  overflow-y: scroll;
+  padding: 10px;
+  color: white;
+}
+
+.sidebar ul {
+  padding-left: 30px;
+}
+
+.main-col {
+  flex: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1 1 0;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.output {
+  margin-bottom: 10px;
+}
+
+/* form controls */
+
+#message-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 10px;
+  margin: 10px;
+}
+
+#message-input {
+  flex: 1 1;
+}
+
+/* chat message styling */
+
+dd span:nth-of-type(1) {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+dd span:nth-of-type(2) {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+dt {
+  padding-left: 30px;
+}
+
+/* status message styling and animation */
+
+.output {
+  height: 1rem;
+  opacity: 0;
+}
+
+.fade-in-06s {
+  animation: 0.6s linear 1 both fade-in;
+}
+
+.fade-out-06s {
+  animation: 0.6s linear 1 both fade-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

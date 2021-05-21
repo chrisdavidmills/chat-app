@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  {{>meta}}
+</head>
+<body>
+  <div class="centered-form">
+    <div class="centered-form__box">
+      <h1>{{title}}</h1>
+      <form id="join-form" action="/chat">
+        <label for="username">Display name</label>
+        <input type="text" id="username" name="username" required>
+        <label for="room">Room</label>
+        <input type="text" id="room" name="room" required>
+        <button>Join chat</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
